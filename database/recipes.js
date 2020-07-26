@@ -4,7 +4,7 @@ const db = require('./index.js');
 
 mongoose.Promise = global.Promise;
 
-const recipesSchema = new mongoose.Schema([
+const recipesSchema = new mongoose.Schema(
   {
     recipe_id: Number,
     full_name: String,
@@ -26,7 +26,7 @@ const recipesSchema = new mongoose.Schema([
       ]
     }
   }
-]);
+);
 
 const Recipe = mongoose.model('Recipes', recipesSchema);
 

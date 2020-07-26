@@ -1,0 +1,86 @@
+body {
+  background-color: #FCFCFC;
+}
+
+.container {
+  font-family: Helvetica;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.nav {
+  width: 300px;
+  height: 100%;
+  background-color: #FCFCFC;
+  padding: 52px 0px 24px 12px;
+  position: fixed;
+}
+
+.userImg {
+  border: 1px solid #b0b0b0;
+  border-radius: 50%;
+  width: 88px;
+  margin: 0px 0px 20px 32px;
+}
+
+.userImg:hover {
+  cursor: pointer;
+}
+
+.search {
+  font-size: 16px;
+  font-weight: 300;
+  color: #5D576B;
+  width: 250px;
+  border: 1px solid #b0b0b0;
+  border-radius: 20px;
+  padding-top: 5px;
+  margin-left: 10px;
+}
+
+.search:focus {
+  outline: 0;
+}
+
+.navBtn {
+  font-size: 28px;
+  font-weight: 600;
+  color: #5D576B;
+  border-radius: 50px;
+  padding: 20px 40px 20px 20px;
+}
+
+.navBtn:hover {
+  cursor: pointer;
+  background-color: #FFFAE3;
+}
+
+.addBtn {
+  font-size: 22px;
+  font-weight: 600;
+  color: #FCFCFC;
+  background-color: #99E1D9;
+  border: 0px;
+  border-radius: 50px;
+  padding: 20px 40px 20px 40px;
+  margin-top: 80px;
+}
+
+.addBtn:hover {
+  cursor: pointer;
+  background-color: #89CAC3;
+}
+
+.addBtn:active{
+  padding: 18px 38px 18px 38px;
+  margin: 82px 2px 2px 2px;
+}
+
+.addBtn:focus {
+  outline: 0;
+}
+
+.main {
+  float: right;
+  position: relative;
+}

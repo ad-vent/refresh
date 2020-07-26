@@ -20,7 +20,7 @@ const createSampleEntries = () => {
   let entries = [];
 
   for (let i = 1; i <= 50; i++) {
-    let randomIndex = Math.floor(Math.random() * 9 + 1);
+    let randomIndex = Math.floor(Math.random() * 9);
     entries.push({
       recipe_id: i,
       full_name: name[randomIndex],

@@ -7,7 +7,7 @@ const getAllEntries = (req, res) => {
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
 
-  Recipe.find({}).sort({ date: -1 })
+  Recipe.find({}).sort({ 'recipe.date': -1 })
     .exec((err, data) => {
       if (err) res.sendStatus(400);
       res.send(data.slice(startIndex, endIndex));
