@@ -2,11 +2,18 @@
   font-family: Helvetica;
 }
 
+.userImg {
+  border: 1px solid #b0b0b0;
+  border-radius: 50%;
+  width: 78px;
+  float: left;
+}
+
 .userName {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 300;
   color: #5D576B;
-  margin: 58px 0px 20px 0px;
+  margin: 56px 0px 20px 104px;
   /* position: fixed; */
 }
 

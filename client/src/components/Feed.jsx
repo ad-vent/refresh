@@ -33,7 +33,6 @@ class Feed extends React.Component {
   handleScroll() {
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
       Parser.getHomeFeed(this.state.pageNumber, this.state.pageLimit, (data) => {
-        console.log(data);
         this.setState({
           pageNumber: this.state.pageNumber + 1,
           entries: [...this.state.entries, ...data]
@@ -46,7 +45,7 @@ class Feed extends React.Component {
     return (
       <div>
         {this.state.entries.map((entry) => (
-          <FeedEntry entry={entry} key={entry.recipe_id} />
+          <FeedEntry entry={entry} key={entry.recipe_id} changeProfileView={this.props.changeProfileView} />
         ))}
       </div>
     );

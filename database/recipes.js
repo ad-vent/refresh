@@ -7,10 +7,10 @@ mongoose.Promise = global.Promise;
 const recipesSchema = new mongoose.Schema(
   {
     recipe_id: Number,
-    full_name: String,
+    username: String,
     user_image: String,
-    followers: [String],
-    following: [String],
+    followers: Number,
+    following: Number,
     recipe: {
       image: String,
       title: String,

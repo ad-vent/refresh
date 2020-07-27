@@ -20,6 +20,7 @@ class FeedEntry extends React.Component {
     this.showEntry = this.showEntry.bind(this);
     this.disableScroll = this.disableScroll.bind(this);
     this.enableScroll = this.enableScroll.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   showEntry() {
@@ -40,6 +41,10 @@ class FeedEntry extends React.Component {
 
   enableScroll() {
     document.body.style.overflow = 'scroll';
+  }
+
+  handleClick() {
+    this.props.changeProfileView(this.props.entry.username)
   }
 
   render() {
@@ -81,9 +86,9 @@ class FeedEntry extends React.Component {
         </Modal>
         <div className={styles.container} >
           {/* USER IMAGE */}
-          <img src={this.props.entry.user_image} className={styles.userImg}></img>
+          <img src={this.props.entry.user_image} className={styles.userImg} onClick={this.handleClick}></img>
           {/* USER NAME */}
-          <div className={styles.userName}>{this.props.entry.full_name}</div>
+          <div className={styles.userName} onClick={this.handleClick}>{this.props.entry.username}</div>
           {/* RECIPE TITLE */}
           <div className={styles.title} onClick={this.showEntry}>{this.props.entry.recipe.title}</div>
           {/* RECIPE PHOTO */}

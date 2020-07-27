@@ -14,11 +14,11 @@ class App extends React.Component {
 
     this.state = {
       view: 'Feed',
-      full_name: 'Adrian Ventura',
-      user_image: 'https://ca.slack-edge.com/T0130S7DBUJ-U013A7QRL93-76ea3b6a9b14-512'
+      username: 'Adrian'
     }
 
     this.changeView = this.changeView.bind(this);
+    this.changeProfileView = this.changeProfileView.bind(this);
   }
 
   changeView(option) {
@@ -27,14 +27,21 @@ class App extends React.Component {
     });
   }
 
+  changeProfileView(user) {
+    this.setState({
+      view: 'Profile',
+      username: user
+    });
+  }
+
   renderView() {
     const { view } = this.state;
 
     if (view === 'Feed') {
-      return <Feed />
+      return <Feed changeProfileView={this.changeProfileView}/>
     }
     if (view === 'Profile') {
-      return <Profile />
+      return <Profile username={this.state.username} />
     }
   }
 
@@ -42,12 +49,14 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.nav}>
-          <img src={this.state.user_image} className={styles.userImg} onClick={() => {this.changeView('Profile')}}></img>
-          <input type="text" className={styles.search} placeholder="   search"></input>
+          <input type="text" className={styles.search} placeholder="  search"></input>
           <table>
             <tbody>
               <tr className={styles.navRow}>
                 <td className={styles.navBtn} onClick={() => {this.changeView('Feed')}}>Home</td>
+              </tr>
+              <tr className={styles.navRow}>
+                <td className={styles.navBtn} onClick={() => {this.changeProfileView('Adrian')}}>Profile</td>
               </tr>
               <tr className={styles.navRow}>
                 <td className={styles.navBtn} onClick={() => {this.changeView('Notifications')}}>Notifications</td>

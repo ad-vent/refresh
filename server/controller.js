@@ -14,33 +14,42 @@ const getAllEntries = (req, res) => {
     });
 };
 
-const getUserInfo = (req, res) => {
-  const user = req.param.username
-  Recipe.find({ username: user })
+const getUserEntries = (req, res) => {
+  const user = req.params.username;
+  const page = Number(req.query.page);
+  const limit = Number(req.query.limit);
+
+  const startIndex = (page - 1) * limit;
+  const endIndex = page * limit;
+
+  const query = [
+    { $match : { username : user } },
+    { $sort : { 'recipe.date' : -1 } }
+  ];
+
+  Recipe.aggregate(query)
     .exec((err, data) => {
       if (err) res.sendStatus(400);
-      res.send(data);
+      res.send(data.slice(startIndex, endIndex));
     });
 };
 
 const getUserLikes = (req, res) => {
-  const user = req.param.username;
+  const user = req.params.username;
   const query = [
-    {
-      $match: {
-        username: user
-      }
-    },
-    {
-      $group: {
-        total_likes: { $sum: '$recipes.likes' }
-      }
-    }
-  ]
+    { $match : { username : user } },
+    { $group : { _id: '$username', 'total_likes' : { $sum : '$recipe.likes' } } }
+  ];
+
+  Recipe.aggregate(query)
+  .exec((err, data) => {
+    if (err) res.sendStatus(400);
+    res.send(data);
+  });
 };
 
 module.exports = {
   getAllEntries,
-  getUserInfo,
+  getUserEntries,
   getUserLikes
 };

@@ -9,10 +9,11 @@ class Profile extends React.Component {
     super(props);
 
     this.state = {
-      full_name: 'Adrian Ventura',
-      likes: 37852,
-      followers: 753,
-      following: 1,
+      username: '',
+      userImg: '',
+      likes: 0,
+      followers: 0,
+      following: 0,
       entries: [],
       pageNumber: 2,
       pageLimit: 6
@@ -22,9 +23,20 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    Parser.getHomeFeed(1, 6, (data) => {
+    Parser.getUserFeed(this.props.username, 1, 6, (data) => {
       this.setState({
-        entries: data
+        entries: data,
+        username: data[0].username,
+        userImg: data[0].user_image,
+        followers: data[0].followers,
+        following: data[0].following
+      });
+    });
+
+
+    Parser.getTotalLikes(this.props.username, (data) => {
+      this.setState({
+        likes: data[0].total_likes
       });
     });
 
@@ -37,8 +49,7 @@ class Profile extends React.Component {
 
   handleScroll() {
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-      Parser.getHomeFeed(this.state.pageNumber, this.state.pageLimit, (data) => {
-        console.log(data);
+      Parser.getUserFeed(this.state.username, this.state.pageNumber, this.state.pageLimit, (data) => {
         this.setState({
           pageNumber: this.state.pageNumber + 1,
           entries: [...this.state.entries, ...data]
@@ -50,7 +61,8 @@ class Profile extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.userName}>{this.state.full_name}</div>
+        <img src={this.state.userImg} className={styles.userImg}></img>
+        <div className={styles.userName}>{this.state.username}</div>
         <table className={styles.statusContainer}>
           <tbody>
             <tr>
