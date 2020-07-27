@@ -40,7 +40,7 @@ class ModalEntry extends React.Component {
           <div className={styles.description}>{this.props.entry.entry.recipe.description}</div>
         </div>
       </div>
-    )
+    );
   }
 }
 

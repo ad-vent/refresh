@@ -1,0 +1,122 @@
+.container {
+  background-color: #FFF;
+  border: 1px solid #b0b0b0;
+  font-family: Helvetica;
+  margin-bottom: 48px;
+}
+
+.userImg {
+  border: 1px solid #b0b0b0;
+  border-radius: 50%;
+  width: 42px;
+  margin-top: 20px;
+  margin-left: 10px;
+  float: left;
+}
+
+.userImg:hover{
+  cursor: pointer;
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: 300;
+  color: #5D576B;
+  margin-top: 32px;
+  margin-left: 65px;
+}
+
+.userName:hover {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #5D576B;
+  margin: 20px 0px 10px 10px;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.entryImg:hover {
+  cursor: pointer;
+}
+
+.likes {
+  font-size: 16px;
+  font-weight: 300;
+  color: #5D576B;
+  margin: 20px 0px 10px 10px;
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
+.commentContainer {
+  margin: 0 0 20px 10px;
+}
+
+.commentName {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5D576B;
+}
+
+.commentText {
+  font-size: 12px;
+  font-weight: 300;
+  max-width: 80px;
+  color: #5D576B;
+}
+
+.inputComment {
+  font-size: 12px;
+  font-weight: 300;
+  color: #5D576B;
+  width: 300px;
+  border: 1px solid #b0b0b0;
+  border-radius: 20px;
+  padding-top: 5px;
+  margin-left: 10px;
+}
+
+.inputComment:focus {
+  outline: 0;
+}
+
+.postBtn {
+  font-size: 12px;
+  font-weight: 300;
+  color: #FCFCFC;
+  background-color: #99E1D9;
+  border: 0px;
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px;
+  margin-left: 10px;
+}
+
+.postBtn:hover {
+  cursor: pointer;
+  background-color: #89CAC3;
+}
+
+.postBtn:active {
+  font-size: 10px;
+  padding: 3px 8px 3px 8px;
+  margin: 3px 2px 3px 12px;
+}
+
+.postBtn:focus {
+  outline: 0;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 300;
+  color: #b0b0b0;
+  margin: 20px 0px 10px 10px;
+}

@@ -30,8 +30,8 @@ const createSampleEntries = () => {
       recipe: {
         image: faker.image.food(),
         title: faker.lorem.words(),
-        ingredients: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
-        description: faker.lorem.paragraph(),
+        ingredients: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
+        description: faker.lorem.paragraphs(5, "\n"),
         date: faker.date.between('2020-07-01', '2020-07-25'),
         likes: faker.random.number({ min: 1, max: 10000 }),
         comments: [

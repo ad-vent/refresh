@@ -108,7 +108,7 @@ class FeedEntry extends React.Component {
           <div className={styles.date}>{moment(this.props.entry.recipe.date).fromNow()}</div>
         </div>
       </div>
-    )
+    );
   }
 }
 
