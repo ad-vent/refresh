@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from 'react-modal';
 
 import Parser from '../Parser.js';
 import FeedEntry from './FeedEntry.jsx';

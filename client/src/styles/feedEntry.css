@@ -56,8 +56,25 @@
   cursor: pointer;
 }
 
+.commentContainer {
+  margin: 0 0 20px 10px;
+}
+
+.commentName {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5D576B;
+}
+
+.commentText {
+  font-size: 12px;
+  font-weight: 300;
+  max-width: 80px;
+  color: #5D576B;
+}
+
 .inputComment {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
   color: #5D576B;
   width: 300px;
@@ -72,7 +89,7 @@
 }
 
 .postBtn {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
   color: #FCFCFC;
   background-color: #99E1D9;
@@ -84,10 +101,11 @@
 
 .postBtn:hover {
   cursor: pointer;
+  background-color: #89CAC3;
 }
 
 .postBtn:active {
-  font-size: 14px;
+  font-size: 10px;
   padding: 3px 8px 3px 8px;
   margin: 3px 2px 3px 12px;
 }
