@@ -48,8 +48,17 @@ const getUserLikes = (req, res) => {
   });
 };
 
+const postData = (req, res) => {
+  Recipe.create(req.body)
+  .then((err, data) => {
+    if (err) res.sendStatus(400);
+    res.send(data, 'posted');
+  });
+}
+
 module.exports = {
   getAllEntries,
   getUserEntries,
-  getUserLikes
+  getUserLikes,
+  postData
 };

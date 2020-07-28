@@ -27,8 +27,17 @@ const getTotalLikes = (username, callback) => {
   });
 };
 
+const postData = (input) => {
+  axios({
+    method: 'POST',
+    url: '/api/post',
+    data: input
+  });
+}
+
 export default {
   getHomeFeed,
   getUserFeed,
-  getTotalLikes
+  getTotalLikes,
+  postData
 }

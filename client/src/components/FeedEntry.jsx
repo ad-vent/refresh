@@ -5,6 +5,7 @@ import moment from 'moment';
 import styles from '../styles/feedEntry.css';
 import modalStyle from '../styles/modalEntry.css';
 import ModalEntry from './ModalEntry.jsx';
+import Comments from './Comments.jsx'
 
 Modal.setAppElement('#app');
 
@@ -96,16 +97,10 @@ class FeedEntry extends React.Component {
           {/* LIKES */}
           <div className={styles.likes}><span className={styles.heart}>♡</span> {this.props.entry.recipe.likes}</div>
           {/* COMMENTS */}
-          <div className={styles.commentContainer}>
-            <div>
-              <span className={styles.commentName}>{this.props.entry.recipe.comments[0].full_name}</span><span className={styles.commentText}> {this.props.entry.recipe.comments[0].text}</span>
-            </div>
-            <div>
-              <span className={styles.commentName}>{this.props.entry.recipe.comments[1].full_name}</span><span className={styles.commentText}> {this.props.entry.recipe.comments[1].text}</span>
-            </div>
-            <div>
-              <span className={styles.commentName}>{this.props.entry.recipe.comments[2].full_name}</span><span className={styles.commentText}> {this.props.entry.recipe.comments[2].text}</span>
-            </div>
+          <div>
+            {this.props.entry.recipe.comments.map((comment) => (
+              <Comments comment={comment} key={comment.text} changeProfileView={this.props.changeProfileView} />
+            ))}
           </div>
           {/* POST COMMENT */}
           <input type="text" className={styles.inputComment} placeholder="  comment..."></input><button type="submit" className={styles.postBtn}>Post</button>

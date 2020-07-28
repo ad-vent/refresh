@@ -1,0 +1,133 @@
+.container {
+  font-family: Helvetica;
+  position: fixed;
+}
+
+.exitBtn {
+  font-size: 12px;
+  font-weight: 300;
+  color: #FCFCFC;
+  background-color: #99E1D9;
+  border: 0px;
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 20px;
+}
+
+.exitBtn:hover {
+  cursor: pointer;
+  background-color: #89CAC3;
+}
+
+.exitBtn:active {
+  font-size: 12px;
+  padding: 4px 9px 4px 9px;
+  margin: 1px 1px 21px 1px;
+}
+
+.exitBtn:focus {
+  outline: 0;
+}
+
+.submitBtn {
+  font-size: 24px;
+  font-weight: 300;
+  color: #FCFCFC;
+  background-color: #99E1D9;
+  border: 0px;
+  border-radius: 50px;
+  padding: 10px 20px 10px 20px;
+  margin: 40px 20px 0px 500px;
+}
+
+.submitBtn:hover {
+  cursor: pointer;
+  background-color: #89CAC3;
+}
+
+.submitBtn:active {
+  font-size: 22px;
+  padding: 8px 18px 8px 18px;
+  margin: 42px 22px 4px 502px;
+}
+
+.submitBtn:focus {
+  outline: 0;
+}
+
+.titleInput {
+  font-size: 16px;
+  font-weight: 300;
+  color: #5D576B;
+  width: 340px;
+  border: 1px solid #b0b0b0;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0px 0px 20px 10px;
+}
+
+.titleInput:focus {
+  outline: 0;
+}
+
+.ingredientsInput {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Helvetica;
+  color: #5D576B;
+  width: 950px;
+  border: 1px solid #b0b0b0;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 0px 20px 10px;
+  resize: none;
+}
+
+.ingredientsInput:focus {
+  outline: 0;
+}
+
+.descriptionInput {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Helvetica;
+  color: #5D576B;
+  width: 950px;
+  border: 1px solid #b0b0b0;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 0px 20px 10px;
+  resize: none;
+}
+
+.descriptionInput:focus {
+  outline: 0;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #5D576B;
+  margin: 10px 0px 40px 20px;
+}
+
+.imgContainer {
+  float: right;
+  position: fixed;
+  left: 720px;
+}
+
+.image {
+  font-size: 16px;
+  font-weight: 300;
+  color: #5D576B;
+  width: 560px;
+  border: 1px solid #b0b0b0;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 38px 0px 20px 30px;
+}
+
+.image:focus {
+  outline: 0;
+}

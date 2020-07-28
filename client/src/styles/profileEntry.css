@@ -56,23 +56,6 @@
   cursor: pointer;
 }
 
-.commentContainer {
-  margin: 0 0 20px 10px;
-}
-
-.commentName {
-  font-size: 12px;
-  font-weight: 600;
-  color: #5D576B;
-}
-
-.commentText {
-  font-size: 12px;
-  font-weight: 300;
-  max-width: 80px;
-  color: #5D576B;
-}
-
 .inputComment {
   font-size: 12px;
   font-weight: 300;
@@ -80,8 +63,8 @@
   width: 300px;
   border: 1px solid #b0b0b0;
   border-radius: 20px;
-  padding-top: 5px;
-  margin-left: 10px;
+  padding: 5px;
+  margin: 20px 0px 0px 10px;
 }
 
 .inputComment:focus {

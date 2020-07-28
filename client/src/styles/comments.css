@@ -1,0 +1,20 @@
+.commentContainer {
+  margin: 0 0 0px 10px;
+}
+
+.commentName {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5D576B;
+}
+
+.commentName:hover {
+  cursor: pointer;
+}
+
+.commentText {
+  font-size: 12px;
+  font-weight: 300;
+  max-width: 80px;
+  color: #5D576B;
+}

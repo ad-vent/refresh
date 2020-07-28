@@ -20,7 +20,7 @@ const recipesSchema = new mongoose.Schema(
       likes: Number,
       comments: [
         {
-          full_name: String,
+          username: String,
           text: String
         }
       ]

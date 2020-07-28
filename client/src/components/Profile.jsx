@@ -74,7 +74,7 @@ class Profile extends React.Component {
         </table>
         <div>
         {this.state.entries.map((entry) => (
-          <ProfileEntry entry={entry} key={entry.recipe_id} />
+          <ProfileEntry entry={entry} key={entry.recipe_id} changeProfileView={this.props.changeProfileView} />
         ))}
       </div>
       </div>

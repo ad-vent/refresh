@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.get('/api/all', controller.getAllEntries);
 app.get('/api/:username', controller.getUserEntries);
 app.get('/api/:username/likes', controller.getUserLikes);
+app.post('/api/post', controller.postData);
 
 app.listen(PORT, () => {
   console.log(`Running on PORT: ${PORT}`)

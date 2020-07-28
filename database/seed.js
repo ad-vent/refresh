@@ -40,15 +40,15 @@ const createSampleEntries = () => {
         likes: faker.random.number({ min: 1, max: 10000 }),
         comments: [
           {
-            full_name: faker.name.findName(),
+            username: name[Math.floor(Math.random() * 10)],
             text: faker.lorem.words(5)
           },
           {
-            full_name: faker.name.findName(),
+            username: name[Math.floor(Math.random() * 10)],
             text: faker.lorem.words(5)
           },
           {
-            full_name: faker.name.findName(),
+            username: name[Math.floor(Math.random() * 10)],
             text: faker.lorem.words(5)
           }
         ]

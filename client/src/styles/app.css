@@ -83,4 +83,5 @@ body {
 .main {
   float: right;
   position: relative;
+  max-width: 642px;
 }
